@@ -1,2 +1,5 @@
 venv
 Procfile
+setup.sh
+.idea
+__pycache__
