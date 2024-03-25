@@ -68,34 +68,19 @@ def most_busy_users(df):
 #     # remove media ommitied
 #     temp = temp[temp['messages'] != '<Media omitted>\n']
 
-def create_word_cloud(selected_user, df):
-    try:
-        with open('stop_hinglish.txt', 'r') as f:
-            stop_word = f.read()
-    except FileNotFoundError:
-        print("Error: 'stop_hinglish.txt' file not found.")
-        # You can add additional error handling or return None here if needed
-        return
-
+def create_word_cloud(selected_user,df):
+    f = open('stop_hinglish.txt', 'r')
+    stop_word = f.read()
     if selected_user != 'Overall':
         df = df[df['users'] == selected_user]
-
-    # Remove group notification
+    # remove group notification
     temp = df[df['users'] != 'group notification']
-
-    # Remove media omitted messages
+    # remove media ommitied
     temp = temp[temp['messages'] != '<Media omitted>\n']
 
-    # Additional processing code for word cloud generation can go here
-
-    # Ensure to close the file after reading its contents
-    f.close()
-
-    # No return statement if you don't want to return anything
-
-    def remove_stop_words(messge):
+    def remove_stop_words(message):
         y =[]
-        for word in messge.lower().split():
+        for word in message.lower().split():
             if word not in stop_word:
                 y.append(word)
         return " ".join(y)
