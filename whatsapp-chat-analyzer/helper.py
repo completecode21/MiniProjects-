@@ -1,8 +1,10 @@
+from collections import Counter
+
+import emoji
 import pandas as pd
 from urlextract import URLExtract
 from wordcloud import WordCloud
-from collections import Counter
-import emoji
+
 extract = URLExtract()
 def fetch_stats(selected_user, df):
 
@@ -56,15 +58,40 @@ def most_busy_users(df):
 
 
 
-def create_word_cloud(selected_user,df):
-    f = open('stop_hinglish.txt', 'r')
-    stop_word = f.read()
+# def create_word_cloud(selected_user,df):
+#     f = open('stop_hinglish.txt', 'r')
+#     stop_word = f.read()
+#     if selected_user != 'Overall':
+#         df = df[df['users'] == selected_user]
+#     # remove group notification
+#     temp = df[df['users'] != 'group notification']
+#     # remove media ommitied
+#     temp = temp[temp['messages'] != '<Media omitted>\n']
+
+def create_word_cloud(selected_user, df):
+    try:
+        with open('stop_hinglish.txt', 'r') as f:
+            stop_word = f.read()
+    except FileNotFoundError:
+        print("Error: 'stop_hinglish.txt' file not found.")
+        # You can add additional error handling or return None here if needed
+        return
+
     if selected_user != 'Overall':
         df = df[df['users'] == selected_user]
-    # remove group notification
+
+    # Remove group notification
     temp = df[df['users'] != 'group notification']
-    # remove media ommitied
+
+    # Remove media omitted messages
     temp = temp[temp['messages'] != '<Media omitted>\n']
+
+    # Additional processing code for word cloud generation can go here
+
+    # Ensure to close the file after reading its contents
+    f.close()
+
+    # No return statement if you don't want to return anything
 
     def remove_stop_words(messge):
         y =[]
