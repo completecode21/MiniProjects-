@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 
-model = joblib.load('Parkinsons_Model')
+model = joblib.load('Parkinsons_Disease/Parkinsons_Model')
 
 st.title('Parkinson Disease Prediction')
 col1, col2, col3, col4, col5 = st.columns(5)
