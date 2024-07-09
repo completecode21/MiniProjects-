@@ -1,0 +1,43 @@
+MDVP:Fo(Hz): Mean fundamental frequency (pitch) of the voice in Hertz. This feature measures the average frequency of the voice signal, which is related to the perceived pitch of the voice.
+
+MDVP:Fhi(Hz): Maximum fundamental frequency (pitch) of the voice in Hertz. It represents the highest frequency observed in the voice signal, which can provide information about voice quality.
+
+MDVP:Flo(Hz): Minimum fundamental frequency (pitch) of the voice in Hertz. This feature represents the lowest frequency observed in the voice signal.
+
+MDVP:Jitter(%): Percentage of jitter in the voice signal. Jitter is a measure of short-term variations in the pitch or fundamental frequency of the voice and can be an indicator of voice instability.
+
+MDVP:Jitter(Abs): Absolute jitter in the voice signal. It provides a measure of the absolute difference between consecutive periods of the voice signal.
+
+MDVP:RAP: Relative average perturbation in the voice signal. RAP measures the average absolute difference between consecutive periods of the voice signal.
+
+MDVP:PPQ: Five-point period perturbation quotient in the voice signal. PPQ quantifies variations in the pitch period of the voice.
+
+Jitter:DDP: Jitter in the signal, calculated as the difference between consecutive differences in pitch periods.
+
+MDVP:Shimmer: Measure of voice amplitude modulation. Shimmer quantifies short-term variations in the amplitude (loudness) of the voice signal.
+
+MDVP:Shimmer(dB): Shimmer measured in decibels (dB). It provides a more perceptually relevant measure of amplitude modulation.
+
+Shimmer:APQ3: Amplitude perturbation quotient for the first three harmonics. APQ3 focuses on amplitude variations in the lower-frequency harmonics of the voice.
+
+Shimmer:APQ5: Amplitude perturbation quotient for the first five harmonics. APQ5 considers amplitude variations in a broader range of harmonics.
+
+MDVP:APQ: Absolute perturbation quotient in the voice signal. It measures the absolute differences between consecutive amplitude values in the voice signal.
+
+Shimmer:DDA: Shimmer measured using the difference between consecutive amplitude values in the voice signal.
+
+NHR: Noise-to-harmonics ratio. NHR quantifies the ratio of noise (non-harmonic components) to harmonics (pitch-related components) in the voice signal.
+
+HNR: Harmonic-to-noise ratio. HNR measures the ratio of harmonics to noise in the voice signal and is related to voice quality.
+
+status: A binary variable indicating the presence (1) or absence (0) of a voice disorder or medical condition.
+
+RPDE: Recurrence period density entropy. It quantifies the complexity and predictability of the voice signal.
+
+DFA: Detrended fluctuation analysis. DFA assesses the self-similarity and fractal properties of the voice signal.
+
+spread1 and spread2: These terms are not commonly used in voice analysis, and their specific meanings would depend on the context of the dataset.
+
+D2: Another term not commonly used in voice analysis. Its meaning would need to be determined based on the dataset's documentation.
+
+PPE: Pitch period entropy. PPE measures the entropy or randomness of pitch periods in the voice signal.
